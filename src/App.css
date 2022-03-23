@@ -1,0 +1,239 @@
+@font-face {
+  font-family: Wavy;
+  src: url("./assets/BlueOcean-YzBDa.otf");
+}
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700;800&display=swap");
+
+body {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+h2 {
+  color: #000000;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 10px;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  text-transform: lowercase;
+}
+
+.Hero-section {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.Hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.Hero-title {
+  color: #ffffff;
+  font-family: "Wavy";
+  font-size: 3.5rem;
+  line-height: 2.5;
+}
+
+.Overview-section {
+  padding: 2rem 0;
+}
+
+.timeline-section {
+  width: 100%;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #006e51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -10px;
+  background: #ffffff;
+  border: 2px solid #006e51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006e51;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006e51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container.left .date {
+  right: -75px;
+}
+
+.container.right .date {
+  left: -75px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #f6d155;
+  border: 2px solid #006e51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006e51;
+  z-index: 1;
+}
+
+.container .content {
+  padding: 30px 90px 30px 30px;
+  background: #f6d155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006e51;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media screen and (min-width: 880px) {
+  body {
+    font-size: 20px;
+  }
+
+  .Hero-wrapper {
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Hero-title {
+    font-size: 5.5rem;
+    line-height: 1.85;
+    margin: 0;
+    width: auto;
+  }
+
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    left: 80px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 80px;
+    border-color: transparent #006e51 transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+}
