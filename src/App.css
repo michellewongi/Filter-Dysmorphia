@@ -2,19 +2,21 @@
   font-family: Wavy;
   src: url("./assets/BlueOcean-YzBDa.otf");
 }
-@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;500;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700;800&display=swap");
 
 body {
   color: #ffffff;
+  font-family: "Merriweather Sans", sans-serif;
   font-size: 16px;
 }
 
 h2 {
-  color: #000000;
+  color: #354550;
   font-family: "Merriweather Sans", sans-serif;
-  font-size: 35px;
+  font-size: 38px;
   font-weight: 700;
-  letter-spacing: 10px;
+  letter-spacing: 7px;
+  margin: 3rem 0;
   padding-bottom: 1.5rem;
   text-align: center;
   text-transform: lowercase;
@@ -36,8 +38,9 @@ h2 {
 .Hero-title {
   color: #ffffff;
   font-family: "Wavy";
-  font-size: 3.5rem;
-  line-height: 2.5;
+  font-size: 2rem;
+  line-height: 3.8;
+  transform: scale(1.5, 3);
 }
 
 .Overview-section {
@@ -51,7 +54,6 @@ h2 {
 .timeline {
   position: relative;
   width: 100%;
-  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -125,83 +127,128 @@ h2 {
   z-index: 1;
 }
 
+.container.left:first-child .date {
+  right: -55px;
+}
+
 .container.left .date {
-  right: -75px;
+  right: -85px;
 }
 
 .container.right .date {
-  left: -75px;
-}
-
-.container .icon {
-  position: absolute;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  padding: 9px 0;
-  top: calc(50% - 20px);
-  background: #f6d155;
-  border: 2px solid #006e51;
-  border-radius: 40px;
-  text-align: center;
-  font-size: 18px;
-  color: #006e51;
-  z-index: 1;
+  left: -85px;
 }
 
 .container .content {
-  padding: 30px 90px 30px 30px;
-  background: #f6d155;
+  padding: 30px 50px 30px 15px;
+  background: #f1c5ae;
   position: relative;
   border-radius: 0 500px 500px 0;
 }
 
 .container.right .content {
-  padding: 30px 30px 30px 90px;
+  padding: 30px 15px 30px 50px;
   border-radius: 500px 0 0 500px;
 }
 
 .container .content h2 {
   margin: 0 0 10px 0;
-  font-size: 18px;
-  font-weight: normal;
-  color: #006e51;
+  font-size: 19px;
+  font-weight: 500;
 }
 
 .container .content p {
   margin: 0;
   font-size: 16px;
-  line-height: 22px;
+  font-weight: 40;
+  line-height: 26px;
   color: #000000;
 }
 
-@media screen and (min-width: 880px) {
+.Stat-section {
+  padding: 0 20px;
+  margin-bottom: 2rem;
+}
+
+.Carousel {
+  position: relative;
+}
+
+.Carousel-slide {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.Carousel-title {
+  color: black;
+  font-size: 19px;
+  font-weight: 500;
+  margin: 0 auto 2rem;
+  width: fit-content;
+}
+
+.Carousel-nav button {
+  background: none;
+  border: none;
+  bottom: 30%;
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+}
+
+.next {
+  right: 0;
+}
+
+.Stat-slideshow {
+  position: relative;
+}
+
+@media screen and (min-width: 600px) {
+  .Hero-title {
+    font-size: 2.8rem;
+  }
+
+  .Carousel-slide {
+    width: 70%;
+  }
+
+  .Carousel-nav button {
+    bottom: 40%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   body {
     font-size: 20px;
   }
 
   .Hero-wrapper {
     display: grid;
-    column-gap: 60px;
+    column-gap: 100px;
     grid-template-columns: repeat(2, 1fr);
+    transform: scale(1.6, 1.95);
+    margin-top: 2rem;
   }
 
   .Hero-title {
-    font-size: 5.5rem;
-    line-height: 1.85;
+    font-size: 3rem;
     margin: 0;
-    width: auto;
+  }
+
+  .timeline {
+    margin-left: 3rem;
+    width: calc(100% - 3rem);
   }
 
   .timeline::after {
-    left: 90px;
+    left: 80px;
   }
 
   .container {
-    width: 100%;
     padding-left: 120px;
-    padding-right: 30px;
     padding-bottom: 20px;
+    width: 90%;
   }
 
   .container.right {
@@ -210,30 +257,38 @@ h2 {
 
   .container.left::after,
   .container.right::after {
-    left: 80px;
+    left: 70px;
   }
 
   .container.left::before,
   .container.right::before {
-    left: 80px;
+    left: 70px;
     border-color: transparent #006e51 transparent transparent;
+  }
+
+  .container.left:first-child .date {
+    right: auto;
+    left: 25px;
   }
 
   .container.left .date,
   .container.right .date {
     right: auto;
-    left: 15px;
-  }
-
-  .container.left .icon,
-  .container.right .icon {
-    right: auto;
-    left: 146px;
+    left: -10px;
   }
 
   .container.left .content,
   .container.right .content {
     padding: 30px 30px 30px 90px;
     border-radius: 500px 0 0 500px;
+  }
+
+  .container .content h2 {
+    font-size: 21px;
+  }
+
+  .Carousel-slide {
+    margin: 0 auto;
+    width: 50%;
   }
 }

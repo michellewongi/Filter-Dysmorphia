@@ -22,7 +22,7 @@ const config = {
   },
 };
 
-const bg = require("../assets/water-texture.jpg");
+const bg = require("../assets/water.jpg");
 
 const Ripples = ({ config }) => {
   const displacementSpriteRef = useRef();

@@ -5,83 +5,78 @@ export default function Overview() {
       <div className="timeline-section">
         <div className="timeline">
           <div className="container left">
-            <div className="date">15 Dec</div>
+            <div className="date">2013</div>
             <div className="content">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2>Looksery</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus
-                erat sagittis non. Ut blandit semper pretium.
+                Looksery was a San Francisco software and photography startup
+                founded by Victor Shaburov and Yuri Monastyrshin. Looksery
+                specialised in facial tracking and face modification technology.
+                They developed a mobile application that allowed users to
+                simulate their appearance for a photo or video chat in
+                real-time.
               </p>
             </div>
           </div>
           <div className="container right">
-            <div className="date">22 Oct</div>
+            <div className="date">Sep 2015</div>
             <div className="content">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2>Snapchat release Lenses</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus
-                erat sagittis non. Ut blandit semper pretium.
+                Snapchat acquires Looksery for $150 million and introduced their
+                new feature called Lenses. Snapchat Lenses allowed users to take
+                photos and videos using AR filters to add 3D elements into the
+                camera photo.
               </p>
             </div>
           </div>
           <div className="container left">
-            <div className="date">10 Jul</div>
+            <div className="date">Dec 2017</div>
             <div className="content">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2>Lens Studio</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus
-                erat sagittis non. Ut blandit semper pretium.
+                Snapchat launched Lens Studio after their in-house team built
+                more than 3000 AR filters. Lens Studio is a tool for creating
+                Snapchat lenses and allows anyone to create their own customized
+                filter.
               </p>
             </div>
           </div>
           <div className="container right">
-            <div className="date">18 May</div>
+            <div className="date">Apr 2017</div>
             <div className="content">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2>Facebook joins...</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus
-                erat sagittis non. Ut blandit semper pretium.
+                Facebook introduced their AR building tool called Camera
+                Effects. It was later renamed as Spark AR and got expanded to
+                Instagram as well. Beta participants were able to create AR
+                filters and make them avaliable to their followers.
               </p>
             </div>
           </div>
           <div className="container left">
-            <div className="date">10 Feb</div>
+            <div className="date">Apr 2019</div>
             <div className="content">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2>Lens Studio 2.0</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus
-                erat sagittis non. Ut blandit semper pretium.
+                Snapchat launched the 2.0 version of Lens Studio. Lens Studio
+                2.0 included tools for transforming pets, hands, bodies, and
+                background.
               </p>
             </div>
           </div>
           <div className="container right">
-            <div className="date">01 Jan</div>
+            <div className="date">Aug 2019</div>
             <div className="content">
-              <h2>Lorem ipsum dolor sit amet</h2>
+              <h2>SparkAR is Public</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus
-                erat sagittis non. Ut blandit semper pretium.
+                Facebook made SparkAR avaliable for everyone, allowing people to
+                create experiences on Instagram and Facebook.
               </p>
             </div>
           </div>
         </div>
       </div>
-      {/* <p>
-        Face filters have dominated social media platforms in recent years.
-        Popular celebrities and regular social media users alike have shared
-        videos of themselves using these filters. Let’s take a step back and
-        learn the origin of these filters. In 2015, Snapchat introduced a
-        collection of filters called “Lenses” which included puppy ears to
-        barfing rainbows. Instagram and Facebook created their own collection of
-        filters in 2017, cementing the concept of filters being a key part of
-        social media usage. During the same year, Snapchat’s in-house team built
-        Snapchat Lens Studio and Facebook introduced Spark AR Studio. Both of
-        these softwares gave users the tools necessary to create their own
-        filters. In 2018, these 3 big companies began allowing third parties to
-        develop face filters on their platform for public use. Since then,
-        various AR artists on social media have started sharing their own
-        filters.
-      </p> */}
     </section>
   );
 }
