@@ -59,7 +59,7 @@ const Ripples = ({ config }) => {
             anchor={0.5}
             x={width / 2}
             y={height / 2}
-            height={height}
+            height={height + 100}
             width={width}
             image={bg}
             tint={0xe6e6e6}
@@ -78,16 +78,16 @@ export default function Home() {
 
   return (
     <>
-      <section className="Hero-section">
-        <div className="Hero-wrapper">
-          <span className="Hero-title">Dive</span>
-          <span className="Hero-title">Into</span>
-          <span className="Hero-title">Filter</span>
-          <span className="Hero-title">Culture</span>
+      <section className="HeroSection">
+        <div className="HeroWrapper">
+          <span className="HeroTitle">Dive</span>
+          <span className="HeroTitle">Into</span>
+          <span className="HeroTitle">Filter</span>
+          <span className="HeroTitle">Culture</span>
         </div>
       </section>
 
-      <Stage width={width} height={height}>
+      <Stage width={width} height={height + 50}>
         <Ripples config={displacementConfig} />
       </Stage>
     </>

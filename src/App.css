@@ -4,10 +4,13 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700;800&display=swap");
 
+/* GENERAL STYLES */
+
 body {
   color: #ffffff;
   font-family: "Merriweather Sans", sans-serif;
   font-size: 16px;
+  position: relative;
 }
 
 h2 {
@@ -15,74 +18,129 @@ h2 {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 38px;
   font-weight: 700;
-  letter-spacing: 7px;
-  margin: 3rem 0;
+  letter-spacing: 10px;
+  margin: 3rem 0 0;
   padding-bottom: 1.5rem;
   text-align: center;
   text-transform: lowercase;
 }
 
-.Hero-section {
+/* HEADER COMPONENT*/
+.Header {
+  height: inherit;
+}
+
+.HeaderCancel {
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+}
+
+.HeaderIcon {
+  position: absolute;
+  cursor: pointer;
+  width: 25px;
+  right: 15px;
+  top: 15px;
+}
+
+@keyframes slide {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.HeaderWrapper {
+  animation: slide 0.5s ease-out;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 0 3rem;
+  position: absolute;
+  right: 0;
+  height: 82%;
+  width: 100%;
+  z-index: 1;
+}
+
+.HeaderWrapper a {
+  color: black;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 10px;
+  padding: 10px 50px;
+  margin-bottom: 3rem;
+  text-decoration: none;
+}
+
+/* HERO PAGE*/
+
+.HeroSection {
   position: absolute;
   transform: translate(-50%, -50%);
   left: 50%;
   top: 50%;
 }
 
-.Hero-wrapper {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-.Hero-title {
+.HeroTitle {
   color: #ffffff;
   font-family: "Wavy";
   font-size: 2rem;
-  line-height: 3.8;
   transform: scale(1.5, 3);
 }
 
-.Overview-section {
-  padding: 2rem 0;
-}
-
-.timeline-section {
-  width: 100%;
-}
-
-.timeline {
-  position: relative;
-  width: 100%;
+.HeroWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100vh;
   margin: 0 auto;
 }
 
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  background: #006e51;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
+.hidden {
+  display: none;
 }
 
-.container {
+/* OVERVIEW PAGE */
+
+.OverviewSection {
+  background-color: #cce9ff;
+  padding: 2rem 0;
+}
+
+.TimelineSection {
+  width: 100%;
+}
+
+.TimelineContainer {
   position: relative;
   background: inherit;
   width: 50%;
 }
 
-.container.left {
+.TimelineContainer.left {
   left: 0;
 }
 
-.container.right {
+.TimelineContainer.right {
   left: 50%;
 }
 
-.container::after {
+.TimelineContainer::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -90,74 +148,74 @@ h2 {
   top: calc(50% - 8px);
   right: -10px;
   background: #ffffff;
-  border: 2px solid #006e51;
+  border: 2px solid #35455d;
   border-radius: 16px;
   z-index: 1;
 }
 
-.container.right::after {
+.TimelineContainer.right::after {
   left: -8px;
 }
 
-.container::before {
+.TimelineContainer::before {
   content: "";
   position: absolute;
   width: 20px;
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: #006e51;
+  background: #35455d;
   z-index: 1;
 }
 
-.container.right::before {
+.TimelineContainer.right::before {
   left: 8px;
 }
 
-.container .date {
+.TimelineContainer .TimelineDate {
   position: absolute;
   display: inline-block;
   top: calc(50% - 8px);
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  color: #006e51;
+  color: #35455d;
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
 }
 
-.container.left:first-child .date {
+.TimelineContainer.left:first-child .TimelineDate {
   right: -55px;
 }
 
-.container.left .date {
+.TimelineContainer.left .TimelineDate {
   right: -85px;
 }
 
-.container.right .date {
+.TimelineContainer.right .TimelineDate {
   left: -85px;
 }
 
-.container .content {
+.TimelineContainer .TimelineContent {
   padding: 30px 50px 30px 15px;
-  background: #f1c5ae;
+  background: #e0bcab;
   position: relative;
   border-radius: 0 500px 500px 0;
 }
 
-.container.right .content {
+.TimelineContainer.right .TimelineContent {
   padding: 30px 15px 30px 50px;
   border-radius: 500px 0 0 500px;
 }
 
-.container .content h2 {
+.TimelineContainer .TimelineContent h2 {
   margin: 0 0 10px 0;
   font-size: 19px;
   font-weight: 500;
 }
 
-.container .content p {
+.TimelineContainer .TimelineContent p {
   margin: 0;
   font-size: 16px;
   font-weight: 40;
@@ -165,56 +223,120 @@ h2 {
   color: #000000;
 }
 
-.Stat-section {
-  padding: 0 20px;
-  margin-bottom: 2rem;
-}
-
-.Carousel {
+.TimelineWrapper {
   position: relative;
-}
-
-.Carousel-slide {
+  width: 100%;
   margin: 0 auto;
-  width: 80%;
 }
 
-.Carousel-title {
+.TimelineWrapper::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  background: #35455d;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+/* STATISTICS PAGE */
+
+.StatSection {
+  padding: 2rem 0;
+}
+
+.StatHeader,
+.StatHeader2 {
   color: black;
   font-size: 19px;
-  font-weight: 500;
-  margin: 0 auto 2rem;
+  font-weight: 400;
+  text-decoration: underline;
+  letter-spacing: 4px;
+  margin: 3rem auto 0;
   width: fit-content;
 }
 
-.Carousel-nav button {
-  background: none;
-  border: none;
-  bottom: 30%;
-  cursor: pointer;
-  font-size: 30px;
-  position: absolute;
+.StatTitle,
+.StatQuestion {
+  color: black;
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: lowercase;
+  letter-spacing: 3px;
+  margin: 0 auto 1rem;
+  width: fit-content;
 }
 
-.next {
-  right: 0;
+.StatQuestion {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  line-height: 1.5;
 }
 
-.Stat-slideshow {
-  position: relative;
+.StatTitle {
+  line-height: 1.5;
+}
+
+.StatWrapper,
+.StatWrapper2 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.StatWrapper {
+  margin-bottom: 6rem;
+}
+
+.StatDoughnut {
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.StatDoughnut {
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 600px) {
-  .Hero-title {
+  @keyframes slide {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 40%;
+    }
+  }
+
+  .HeaderWrapper {
+    width: 40%;
+  }
+
+  .HeroTitle {
     font-size: 2.8rem;
   }
 
-  .Carousel-slide {
-    width: 70%;
+  .StatWrapper {
+    grid-template-rows: repeat(2, 1fr);
   }
 
-  .Carousel-nav button {
-    bottom: 40%;
+  .StatWrapper,
+  .StatWrapper2 {
+    display: grid;
+    column-gap: 100px;
+    grid-template-columns: 1.2fr 1.5fr;
+    row-gap: 60px;
+    padding: 0 2rem;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+  }
+
+  .StatQuestion {
+    margin: 4rem auto 0;
+    line-height: 2;
   }
 }
 
@@ -223,72 +345,99 @@ h2 {
     font-size: 20px;
   }
 
-  .Hero-wrapper {
+  @keyframes slide {
+    0% {
+      width: 0%;
+    }
+
+    100% {
+      width: 20%;
+    }
+  }
+
+  .HeaderWrapper {
+    height: 76%;
+    width: 20%;
+  }
+
+  .HeroWrapper {
     display: grid;
-    column-gap: 100px;
+    height: auto;
+    column-gap: 200px;
+    row-gap: 100px;
     grid-template-columns: repeat(2, 1fr);
-    transform: scale(1.6, 1.95);
+    transform: scale(1.2, 1.5);
     margin-top: 2rem;
   }
 
-  .Hero-title {
-    font-size: 3rem;
+  .HeroTitle {
+    font-size: 3.4rem;
     margin: 0;
   }
 
-  .timeline {
-    margin-left: 3rem;
-    width: calc(100% - 3rem);
-  }
-
-  .timeline::after {
-    left: 80px;
-  }
-
-  .container {
+  .TimelineContainer {
     padding-left: 120px;
     padding-bottom: 20px;
     width: 90%;
   }
 
-  .container.right {
+  .TimelineContainer.right {
     left: 0%;
   }
 
-  .container.left::after,
-  .container.right::after {
+  .TimelineContainer.left::after,
+  .TimelineContainer.right::after {
     left: 70px;
   }
 
-  .container.left::before,
-  .container.right::before {
+  .TimelineContainer.left::before,
+  .TimelineContainer.right::before {
     left: 70px;
     border-color: transparent #006e51 transparent transparent;
   }
 
-  .container.left:first-child .date {
+  .TimelineContainer.left:first-child .TimelineDate {
     right: auto;
     left: 25px;
   }
 
-  .container.left .date,
-  .container.right .date {
+  .TimelineContainer.left .TimelineDate,
+  .TimelineContainer.right .TimelineDate {
     right: auto;
     left: -10px;
   }
 
-  .container.left .content,
-  .container.right .content {
+  .TimelineContainer.left .TimelineContent,
+  .TimelineContainer.right .TimelineContent {
     padding: 30px 30px 30px 90px;
     border-radius: 500px 0 0 500px;
   }
 
-  .container .content h2 {
+  .TimelineContainer .TimelineContent h2 {
     font-size: 21px;
   }
 
-  .Carousel-slide {
-    margin: 0 auto;
-    width: 50%;
+  .TimelineWrapper {
+    margin-left: 3rem;
+    width: calc(100% - 3rem);
+  }
+
+  .TimelineWrapper::after {
+    left: 80px;
+  }
+
+  .StatHeader2 {
+    margin: 4rem auto;
+  }
+
+  .StatWrapper {
+    column-gap: 150px;
+    row-gap: 100px;
+    margin: 4rem auto 0;
+    width: 90%;
+  }
+
+  .StatDoughnut {
+    width: 400px;
   }
 }
