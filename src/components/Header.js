@@ -20,9 +20,9 @@ export default function Header() {
 
       <nav className="HeaderWrapper hidden">
         <img src={cancel} className="HeaderCancel" onClick={handleClick} />
-        <a href="/">Home</a>
-        <a href="/overview">History</a>
-        <a href="/statistics">Analysis</a>
+        <a href="/">Home.</a>
+        <a href="/history">History.</a>
+        <a href="/statistics">Data.</a>
       </nav>
     </header>
   );
