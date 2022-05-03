@@ -23,6 +23,7 @@ export default function Header() {
         <a href="/">Home.</a>
         <a href="/history">History.</a>
         <a href="/statistics">Data.</a>
+        <a href="/filters">Filters.</a>
       </nav>
     </header>
   );

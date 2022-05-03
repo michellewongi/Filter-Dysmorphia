@@ -12,7 +12,7 @@ import {
 import { Doughnut, Bar } from "react-chartjs-2";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { data1, data2, data3, data4, data5, data6 } from "./Data";
+import { data3, data4, data5, data6 } from "./Data";
 
 ChartJS.register(
   ArcElement,
@@ -59,28 +59,6 @@ export default function Statistics() {
       <h3 className="StatHeader">General</h3>
 
       <div className="StatWrapper">
-        {/* <div data-aos={"fade-up"} data-aos-duration="1000">
-          <h4 className="StatTitle">What is your age?</h4>
-          <Bar
-            data={data1}
-            options={{
-              indexAxis: "x",
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: "top",
-                  display: false,
-                },
-              },
-            }}
-          />
-        </div>
-
-        <div data-aos={"fade-up"} data-aos-duration="1000">
-          <h4 className="StatTitle">What is your gender identity?</h4>
-          <Doughnut data={data2} className="StatDoughnut" />
-        </div> */}
-
         <div data-aos={"fade-up"} data-aos-duration="1000">
           <h4 className="StatTitle">
             How frequently do you use beauty filters on social media?

@@ -150,8 +150,18 @@ li {
 
 /* OVERVIEW PAGE */
 
-.OverviewSection {
-  padding: 2rem 0;
+.OverviewSection,
+.StatSection,
+.FilterSection {
+  padding: 2rem 0 0;
+}
+
+.OverviewFoot {
+  color: black;
+  font-weight: 300;
+  font-size: 13px;
+  margin-top: 3rem;
+  margin-left: 1rem;
 }
 
 .TimelineSection {
@@ -188,21 +198,6 @@ li {
 
 .TimelineContainer.right::after {
   left: -8px;
-}
-
-.TimelineContainer::before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  top: calc(50% - 1px);
-  right: 8px;
-  background: #35455d;
-  z-index: 1;
-}
-
-.TimelineContainer.right::before {
-  left: 8px;
 }
 
 .TimelineContainer .TimelineDate {
@@ -275,10 +270,6 @@ li {
 
 /* STATISTICS PAGE */
 
-.StatSection {
-  padding: 2rem 0;
-}
-
 .StatHeader,
 .StatHeader2 {
   color: black;
@@ -332,6 +323,60 @@ li {
   margin: 0 auto;
 }
 
+.FilterHeader,
+.FirstFilterHeader {
+  margin-top: 2rem;
+  text-decoration: underline;
+}
+
+.FilterItem {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.FilterOverlay {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.FilterOverlay:hover {
+  opacity: 1;
+}
+
+.FilterDescription {
+  color: black;
+  font-weight: 300;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  width: calc(100% - 4rem);
+}
+
+.FilterListHeader {
+  color: black;
+  text-decoration: underline;
+  font-weight: 400;
+  margin-left: 2rem;
+  width: calc(100% - 4rem);
+}
+
+.FilterList {
+  margin-left: 2rem;
+}
+
+.FilterImg {
+  height: 450px;
+}
+
 @media screen and (min-width: 600px) {
   @keyframes slide {
     0% {
@@ -377,6 +422,15 @@ li {
     padding-bottom: 2rem;
   }
 
+  h2 {
+    border: 5px dotted pink;
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    text-align: left;
+    width: min-content;
+    padding: 10px;
+  }
+
   @keyframes slide {
     0% {
       width: 0%;
@@ -408,9 +462,9 @@ li {
   }
 
   .TimelineContainer {
-    padding-left: 120px;
+    padding-left: 100px;
     padding-bottom: 20px;
-    width: 90%;
+    width: 92%;
   }
 
   .TimelineContainer.right {
@@ -419,24 +473,18 @@ li {
 
   .TimelineContainer.left::after,
   .TimelineContainer.right::after {
-    left: 70px;
-  }
-
-  .TimelineContainer.left::before,
-  .TimelineContainer.right::before {
-    left: 70px;
-    border-color: transparent #006e51 transparent transparent;
+    left: 50px;
   }
 
   .TimelineContainer.left:first-child .TimelineDate {
     right: auto;
-    left: 25px;
+    left: 5px;
   }
 
   .TimelineContainer.left .TimelineDate,
   .TimelineContainer.right .TimelineDate {
     right: auto;
-    left: -10px;
+    left: -30px;
   }
 
   .TimelineContainer.left .TimelineContent,
@@ -455,7 +503,7 @@ li {
   }
 
   .TimelineWrapper::after {
-    left: 80px;
+    left: 60px;
   }
 
   .StatHeader2 {
@@ -485,5 +533,44 @@ li {
 
   .StatDoughnut {
     width: 400px;
+  }
+
+  .FilterHeader {
+    margin-top: 5rem;
+  }
+
+  .FilterDescription {
+    margin-left: 4rem;
+    margin-bottom: 3rem;
+    line-height: 2;
+    width: calc(100% - 8rem);
+  }
+
+  .FilterListHeader {
+    font-size: 20px;
+    margin-left: 4rem;
+  }
+
+  .FilterList {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 4rem;
+    width: 50%;
+  }
+
+  .FilterWrapper {
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .FilterImg {
+    max-height: 500px;
+  }
+
+  .OverviewFoot p {
+    font-size: 14px !important;
+    line-height: normal !important;
   }
 }
