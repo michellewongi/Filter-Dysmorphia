@@ -387,7 +387,7 @@ li {
 
 .QRCode {
   align-self: center;
-  width: 130px;
+  width: 200px;
 }
 
 @media screen and (min-width: 600px) {
@@ -436,7 +436,7 @@ li {
   }
 
   h2 {
-    border: 5px dotted pink;
+    border: 5px dotted #ffc0cb;
     margin-left: 4rem;
     margin-bottom: 3rem;
     text-align: left;
@@ -594,6 +594,6 @@ li {
 
   .QRCode {
     margin-right: 15rem;
-    width: 150px;
+    width: 230px;
   }
 }
