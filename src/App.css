@@ -371,10 +371,23 @@ li {
 
 .FilterList {
   margin-left: 2rem;
+  margin-bottom: 0;
 }
 
 .FilterImg {
   height: 450px;
+}
+
+.FilterDetailsRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+.QRCode {
+  align-self: center;
+  width: 130px;
 }
 
 @media screen and (min-width: 600px) {
@@ -553,9 +566,9 @@ li {
 
   .FilterList {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2, 1fr);
     margin-left: 4rem;
-    width: 50%;
+    width: 100%;
   }
 
   .FilterWrapper {
@@ -572,5 +585,15 @@ li {
   .OverviewFoot p {
     font-size: 14px !important;
     line-height: normal !important;
+  }
+
+  .FilterDetailsRow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .QRCode {
+    margin-right: 15rem;
+    width: 150px;
   }
 }
