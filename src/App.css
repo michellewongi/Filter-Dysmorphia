@@ -301,6 +301,10 @@ li {
   line-height: 1.5;
 }
 
+.StatList li {
+  padding-right: 2rem;
+}
+
 .StatWrapper,
 .StatWrapper2 {
   display: flex;

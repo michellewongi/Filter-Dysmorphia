@@ -41,7 +41,7 @@ export default function Statistics() {
         frequency of filter usage with dysmorphia and considering getting
         cosmetic procedures done.
       </p>
-      <ul>
+      <ul className="StatList">
         <li>
           There is a 10% increase in experiencing dysmorphia with each increased
           level in frequency of using beauty filters.
