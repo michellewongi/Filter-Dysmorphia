@@ -163,6 +163,10 @@ li {
   margin-left: 1rem;
 }
 
+.OverviewFoot:last-child {
+  width: 150px;
+}
+
 .TimelineSection {
   margin-top: 3rem;
   width: 100%;
@@ -410,6 +414,10 @@ li {
 
   .HeroTitle {
     font-size: 2.8rem;
+  }
+
+  .OverviewFoot:last-child {
+    width: auto;
   }
 
   .StatWrapper,

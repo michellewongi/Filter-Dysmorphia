@@ -137,7 +137,8 @@ export default function Overview() {
                     Roberts, Matt. "Creativity for all: Facebook’s Spark AR now
                     lets anyone build and share effects on Instagram".{" "}
                     <i>Meta for Developers.</i> 13 Aug. 2019.
-                    https://developers.facebook.com/blog/post/2019/08/13/spark-ar-publish-to-instagram/.
+                    https://developers.
+                    facebook.com/blog/post/2019/08/13/spark-ar-publish-to-instagram/.
                   </p>
                 </div>
               </div>
